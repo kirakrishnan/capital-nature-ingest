@@ -4,6 +4,7 @@ from datetime import datetime
 import re
 import requests
 import unicodedata
+import pprint
 
 
 def fetch_page_soup(url):
@@ -29,8 +30,8 @@ def parse_event_cost(event_cost):
 
 
 def handle_ans_page(soup):
-
-
+    events_url = soup.find_all('h3',{'class':'tribe-events-month-event-title'})
+    pprint.pprint(soup)
     return
 
 
